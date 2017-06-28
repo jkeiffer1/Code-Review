@@ -1,23 +1,18 @@
 
 a = [1,2,3,4,5,6,7,8,9].sample
-
-def guess()
-	gets.chomp.to_i
-end
-
 puts "pick a number between 1 and 9"
-
-if guess >= a
-	puts "try lower"
-	guess
-elsif guess <= a
-	puts "try higher"
-	guess
-elsif guess == a
-	puts "congratulations"
+def guess()
+guess == gets.chomp.to_i
 end
 until guess == a
-	if guess == a
-		puts "congratulations"
+	if guess >= a
+	puts "try lower"
+	guess = gets.chomp.to_i
+	elsif guess <= a
+		puts "try higher"
+		guess = gets.chomp.to_i
 	end
 end
+
+	puts "congratulations!"
+
